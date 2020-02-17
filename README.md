@@ -38,7 +38,7 @@ Take a look at the [code](./SimpleWeatherService/Program.cs).  It's documented t
 There are a few options.  You can run locally with docker, connect to `demo.nats.io`, or connect to [NGS](https://synadia.com/ngs).
 There's plenty of documentation [here](https://docs.nats.io/nats-server/installation).  If you use `demo.nats.io` I'd suggest altering the subject the service listens on.
 
-To run locally one way to launch the NATS server is through docker.
+One way to launch the NATS server is through docker.
 
 `$ docker run --rm -p 4222:4222 nats`
  
