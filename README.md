@@ -57,14 +57,15 @@ dotnet run <your openweatherorg api key> <nats url> <optional credentials>
 
 First, I'll get my IP.  Depending on your system, you may need to use a different API.
 
-```bash
+```text
 $ ipconfig getifaddr en1
 192.168.0.29
 ```
 
-Next we'll start our service.
+Next we'll start our service.  I've saved my api key in a file named `apikey.txt`, but you could pass
+it directly.
 
-```
+```text
 $ dotnet bin/Debug/netcoreapp3.1/netcoreapp3.1/SimpleWeatherService.dll `cat apikey.txt` 192.168.0.29
 Connected and listening for requests.
 ```
@@ -72,7 +73,7 @@ Connected and listening for requests.
 Using the [nats-box](https://hub.docker.com/r/synadia/nats-box) utility, we'll send a request for the current
 weather in Denver.
 
-```bash
+```text
 $ docker run --rm -it synadia/nats-box
              _             _               
  _ __   __ _| |_ ___      | |__   _____  __
