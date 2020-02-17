@@ -1,4 +1,4 @@
-# A Simple Weather Microservice using NATS
+# A Simple .NET Weather Microservice using NATS
 
 This is a really simple example of a scalable .NET microservice using [NATS](https://nats.io).  In this example service,
 we'll serve weather data from [OpenWeatherMap.org](https://openweathermap.org/) to NATS clients.  Data will be cached
