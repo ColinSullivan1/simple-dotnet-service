@@ -6,7 +6,7 @@ for a short period of time to lower latency, providing a better quality of servi
 
 ## Requirements for this example
 
-- [.NET Core]((https://dotnet.microsoft.com/download)) 3.1 or higher.
+- [.NET Core](https://dotnet.microsoft.com/download) 3.1 or higher.
 - [Docker](https://docker.com) or a version of nats-req from NATS examples.
 - A NATS server
 - An OpenWeatherMap.org API key
