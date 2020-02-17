@@ -11,8 +11,8 @@ for a short period of time to lower latency, providing a better quality of servi
 - A NATS server
 - An OpenWeatherMap.org API key
 
-It takes about 2 minutes to create an OpenWeatherMap API key.  [Signup](https://home.openweathermap.org/users/sign_up)
-and create a [api key](https://home.openweathermap.org/api_keys).
+It takes about 2 minutes to [signup](https://home.openweathermap.org/users/sign_up)
+and create an OpenWeatherMap [api key](https://home.openweathermap.org/api_keys).
 
 ## Design
 
