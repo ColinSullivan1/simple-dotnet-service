@@ -2,7 +2,7 @@
 
 This is a really simple example of a scalable .NET microservice using [NATS](https://nats.io).  In this example service,
 we'll serve weather data from [OpenWeatherMap.org](https://openweathermap.org/) to NATS clients.  Data will be cached
-for a short period of time to lower latency, providing a better quality of service.
+for a short period of time to reduce latency, providing a better quality of service.
 
 ## Requirements for this example
 
