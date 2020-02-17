@@ -57,7 +57,8 @@ dotnet run <your openweatherorg api key> <nats url> <optional credentials>
 
 First, I'll get my IP.  Depending on your system, you may need to use a different API.
 
-```$ ipconfig getifaddr en1
+```bash
+$ ipconfig getifaddr en1
 192.168.0.29
 ```
 
