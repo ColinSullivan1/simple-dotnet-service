@@ -16,6 +16,9 @@ and create an OpenWeatherMap [api key](https://home.openweathermap.org/api_keys)
 
 ## Design
 
+
+![Diagram](./img/WeatherServiceDiagram.jpg)
+
 The design is simple.  We create a connection to NATS, listen to requests on the `weather.current` subject, and when 
 we receive requests we serve up the data.  This is achieved using the [request/reply](https://docs.nats.io/nats-concepts/reqreply)
 pattern with a [queue subscription](https://docs.nats.io/nats-concepts/queue) used here to enable scaling. For bonus points,
