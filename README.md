@@ -62,8 +62,7 @@ Here is the NATS code:
     var response = nc.Request("weather.current", CheckDefaultLocation(location), 5000);
 ```
 
-Part the request itself is a location, which can be a latitude/longitude (e.g. -105.01,39.54) or a city name (e.g. Denver).
-Check out https://openweathermap.org/current for locations.
+The request payload is a string representing a location, which can be a latitude/longitude (e.g. "-105.01,39.54") or a city name (e.g. "Denver").  Check out https://openweathermap.org/current for locations.
 
 Usage:  `dotnet run -p SimpleWeatherRequestor --location <city name or lat,long> --url <NATS url> --creds <NATS Credentials>`
 
