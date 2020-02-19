@@ -39,7 +39,7 @@ There are just three things we do with NATS in our service.
 2) Subscribe and provide a handler to process messages
 3) Drain on exit *(optional but good practice)*
 
-Take a look at the [code](./SimpleWeatherService/Program.cs).  It's documented to describe what is happening when, and why.
+Take a look at the [code](./SimpleWeatherService/Program.cs).  It is documented to describe what is happening when, and why.
 
 Usage:  `SimpleWeatherService <Required API key> --url <NATS url> --creds <NATS Credentials>`
 
