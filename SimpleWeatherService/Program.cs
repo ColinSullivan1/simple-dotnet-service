@@ -16,6 +16,7 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using NATS.Client;
+using System.Linq;
 
 namespace SimpleWeatherService
 {
@@ -124,12 +125,31 @@ namespace SimpleWeatherService
             {
                 try
                 {
-                    // Request data from OpenWeatherOrg and cache the result.
-                    content = client.DownloadString(
-                        "http://api.openweathermap.org/data/2.5/weather?q=" +
-                        location + "&APPID=" +
-                        OpenWeatherMapAPIKey);
+                    string address;
 
+                    // if there are letters assume a city
+                    if (location.Any(x => char.IsLetter(x)))
+                    {
+                        address = "http://api.openweathermap.org/data/2.5/weather?q=" +
+                            location + "&APPID=" +
+                            OpenWeatherMapAPIKey;
+                    }
+                    else
+                    {
+                        string[] ll = location.Split(',');
+                        if (ll.Length != 2)
+                        {
+                            throw new Exception($"Invalid location: {location}");
+                        }
+
+                        address = $"http://api.openweathermap.org/data/2.5/weather?lat=" +
+                            ll[0] + "&lon=" + ll[1] + "&APPID=" +
+                            OpenWeatherMapAPIKey;
+                    }
+
+
+                    // Request data from OpenWeatherOrg and cache the result.
+                    content = client.DownloadString(address);
                     resultsCache.Add(location, content);
                 }
                 catch (Exception ex)
@@ -230,6 +250,12 @@ namespace SimpleWeatherService
 
     class MainClass
     {
+        private static void Usage()
+        {
+            Console.WriteLine("Usage:  SimpleWeatherService <API key> --url <NATS url> --creds <NATS Credentials>");
+            Environment.Exit(1);
+        }
+
         public static void Main(string[] args)
         {
             string apikey = null;
@@ -238,14 +264,17 @@ namespace SimpleWeatherService
 
             if (args.Length == 0)
             {
-                Console.WriteLine("Usage:  {0}: <API key> <NATS url> <NATS Credentials>");
-                Environment.Exit(1);
+                Usage();
             }
 
             apikey = args[0];
 
-            if (args.Length > 1) url = args[1];
-            if (args.Length > 2) creds = args[2];
+            for (int i = 1; i < args.Length; i+=2)
+            {
+                if (args[i] == "--url") url = args[i + 1];
+                else if (args[i] == "--creds") creds = args[i + 1];
+                else Usage();
+            } 
 
             var ws = new WeatherService(apikey, url, creds);
 

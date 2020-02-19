@@ -1,0 +1,28 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleWeatherService", "SimpleWeatherService\SimpleWeatherService.csproj", "{1A08045D-FB27-4D82-B4F2-5C0B3C177DBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleWeatherRequestor", "SimpleWeatherRequestor\SimpleWeatherRequestor.csproj", "{343FF63E-88CE-4AAA-9028-6123A1AF434E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{46FB0203-1678-4AD7-92AC-49F3B723188A}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A08045D-FB27-4D82-B4F2-5C0B3C177DBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A08045D-FB27-4D82-B4F2-5C0B3C177DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A08045D-FB27-4D82-B4F2-5C0B3C177DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A08045D-FB27-4D82-B4F2-5C0B3C177DBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{343FF63E-88CE-4AAA-9028-6123A1AF434E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{343FF63E-88CE-4AAA-9028-6123A1AF434E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{343FF63E-88CE-4AAA-9028-6123A1AF434E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{343FF63E-88CE-4AAA-9028-6123A1AF434E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
