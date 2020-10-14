@@ -41,7 +41,7 @@ There are just three things we do with NATS in our service.
 
 Take a look at the [code](./SimpleWeatherService/Program.cs).  It is documented to describe what is happening when, and why.
 
-Usage:  `SimpleWeatherService <Required API key> --url <NATS url> --creds <NATS Credentials>`
+Usage:  `dotnet run -p SimpleWeatherService <Required API key> --url <NATS url> --creds <NATS Credentials>`
 
 The only required parameter is the API key.
 

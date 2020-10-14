@@ -26,8 +26,8 @@
     <NoStdLib>false</NoStdLib>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="NATS.Client" Version="0.10.0" />
-    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="3.1.1" />
+    <PackageReference Include="NATS.Client" Version="0.11.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="3.1.9" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Dropbox\go\pkg\mod\cache\download\github.com\nats-io\nuid\%40v\v1.0.1.mod" />
